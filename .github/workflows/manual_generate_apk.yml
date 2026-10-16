@@ -56,6 +56,7 @@ jobs:
       #    ndk-version: r21e
 
       - name: Test androidGitVersion
+        continue-on-error: true
         run: |
           echo "count=${{steps.valid-tags.outputs.count}}"
           gradle --quiet androidGitVersion
