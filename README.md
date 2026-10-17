@@ -1,3 +1,17 @@
+# EmuX
+
+EmuX is a modified version of PPSSPP, the open-source PSP emulator created by Henrik Rydgård and many contributors. EmuX is not the official PPSSPP and is not affiliated with or endorsed by the PPSSPP project.
+
+- Original project: https://github.com/hrydgard/ppsspp
+- EmuX source code: https://github.com/Mradul-ux/ppsspp
+- License: GPL, the same as PPSSPP. See LICENSE.TXT for the exact terms.
+- EmuX does not include any games or PSP system files. Use it only with games you legally own.
+- "PSP" is a trademark of Sony.
+
+Changes from PPSSPP: app name, icon, application ID, and main menu text.
+
+---
+
 PPSSPP - a fast and portable PSP emulator
 =========================================
 
