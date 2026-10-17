@@ -1,3 +1,4 @@
+# Modified for EmuX on 17 October 2026: Test androidGitVersion step set to continue-on-error. Original work: PPSSPP (GPL, see LICENSE.TXT).
 name: Manual Generate Android APK
 on:
   workflow_dispatch:
