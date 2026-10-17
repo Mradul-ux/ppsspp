@@ -237,13 +237,17 @@ public:
 			return;
 		}
 
-		dc.Draw()->DrawImage(GetIconID(), bounds_.x, bounds_.y, 1.0f);
+		// dc.Draw()->DrawImage(GetIconID(), bounds_.x, bounds_.y, 1.0f);
 
 		if (bounds_.w < iconImg->w + logoImg->w + 36) {
 			return;
 		}
 
-		dc.Draw()->DrawImage(ImageID("I_LOGO"), bounds_.x + iconImg->w + 8, bounds_.y + 4, 1.0f);
+		// dc.Draw()->DrawImage(ImageID("I_LOGO"), bounds_.x + iconImg->w + 8, bounds_.y + 4, 1.0f);
+dc.Flush();
+dc.SetFontStyle(dc.GetTheme().uiFont);
+std::string brandName = "EmuX";
+dc.DrawText(brandName, bounds_.x + 8, bounds_.y + 4, dc.GetTheme().infoStyle.fgColor);
 
 		std::string versionString = PPSSPP_GIT_VERSION;
 		// Strip the 'v' from the displayed version, and shorten the commit hash.
