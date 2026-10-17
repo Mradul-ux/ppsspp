@@ -8,7 +8,7 @@ EmuX is a modified version of PPSSPP, the open-source PSP emulator created by He
 - EmuX does not include any games or PSP system files. Use it only with games you legally own.
 - "PSP" is a trademark of Sony.
 
-Changes from PPSSPP: app name, icon, application ID, and main menu text.
+Changes from PPSSPP (first modified 17 October 2026; see the commit history for the date of each change): app name, icon, application ID (com.emux.app), main menu text, the top-right logo replaced with text, and the "Buy PPSSPP Gold" button hidden.
 
 ---
 
