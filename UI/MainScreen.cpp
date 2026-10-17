@@ -1,3 +1,4 @@
+// Modified for EmuX on 17 October 2026: main menu text changed, "Buy PPSSPP Gold" hidden, top-right logo replaced with text. Original work: PPSSPP (GPL, see LICENSE.TXT).
 // Copyright (c) 2013- PPSSPP Project.
 
 // This program is free software: you can redistribute it and/or modify
