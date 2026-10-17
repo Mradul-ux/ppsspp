@@ -1,3 +1,4 @@
+// Modified for EmuX on 17 October 2026: application ID changed to com.emux.app. Original work: PPSSPP (GPL, see LICENSE.TXT).
 plugins {
 	id("com.android.application")
 	id("com.google.protobuf")
