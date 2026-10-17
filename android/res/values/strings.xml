@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- Modified for EmuX on 17 October 2026: app_name and shortcut_name changed. Original work: PPSSPP (GPL, see LICENSE.TXT). -->
 <resources>
 
     <string name="app_name">EmuX</string>
