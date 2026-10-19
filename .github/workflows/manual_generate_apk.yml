@@ -11,6 +11,7 @@ on:
         default: 'NormalOptimized'
         options: 
         - NormalOptimized
+        - NormalRelease
         - NormalDebug
         - VROptimized
         - VRDebug
@@ -63,7 +64,17 @@ jobs:
           gradle --quiet androidGitVersion
       
       - name: Assemble APK
-        run: ./gradlew assemble${{ github.event.inputs.buildVariant }} --stacktrace
+        env:
+          ORG_GRADLE_PROJECT_RELEASE_STORE_PASSWORD: ${{ secrets.EMUX_STORE_PASSWORD }}
+          ORG_GRADLE_PROJECT_RELEASE_KEY_ALIAS: ${{ secrets.EMUX_KEY_ALIAS }}
+          ORG_GRADLE_PROJECT_RELEASE_KEY_PASSWORD: ${{ secrets.EMUX_STORE_PASSWORD }}
+          KEYSTORE_B64: ${{ secrets.EMUX_KEYSTORE_BASE64 }}
+        run: |
+          if [ "${{ github.event.inputs.buildVariant }}" = "NormalRelease" ]; then
+            echo "$KEYSTORE_B64" | base64 -d > "$RUNNER_TEMP/emux-release.jks"
+            export ORG_GRADLE_PROJECT_RELEASE_STORE_FILE="$RUNNER_TEMP/emux-release.jks"
+          fi
+          ./gradlew assemble${{ github.event.inputs.buildVariant }} --stacktrace
       
       #- name: Gradle Test
       #  run: bash ./gradlew test${{ github.event.inputs.buildVariant }}UnitTest --stacktrace
